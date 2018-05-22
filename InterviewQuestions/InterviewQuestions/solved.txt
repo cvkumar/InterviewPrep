@@ -1,0 +1,44 @@
+
+Arrays and Strings
+palindrome (forward, backward, string): Scan from left and right checking to see if letters always match
+Plus One: Loop from back of array. If carry continues all the way, create new array.
+Two Sum: Create map of value to its complement to get to k. Then see if it exists
+Word Pattern: Make map of split word to letter. Ensure it all works
+Move Zeroes: Iterate, count all zeroes while moving non-zero elements back numZero back. Moving from back of array, place zeroes
+Reverse Words in a String: Split words, then reverse
+Product of Array Except Self: Sweep left and right keeping track of product so far. Then should be able to determine.
+Valid Anagram: If length diff, then return False, Get char counts and compare them
+Longest Palindrome:
+Generate Parentheses:
+
+Math
+Rectangle Overlap: Find 4 cases of when the rectangle does overlap then return opposite boolean
+Array Partition I: Sort then only sum the backmost element of the pair every time (move up by two)
+Add Digits
+
+Linked List
+Find start of cycle: distance from start to cycle = dist from where;fast and slow meet from cycle
+Reverse Linked List: Use three pointers to do actual reverse while iterating
+Intersection of Two Linked Lists: Two pointers iterating over both (stop if equal). When one gets to end, start again but switch heads
+
+Binary Trees
+Check if a tree is BST or not: keep track of min and max of each element
+Find the kth smallest element of the BST: Do in order traversal and keep list
+Maximum Depth of Binary Tree: max Height
+Same Tree: Use set to see if duplicate elements
+Balanced Binary Tree: Height doesn't differ by more than 1 for any subtree
+Binary Tree Paths: Keep all paths in array as strings
+Sum Root to Leaf Numbers: append all paths to array. Then, using helper function, sum them all
+
+Stacks and Queues
+Implement queues using stacks: Use two stacks
+
+Dynamic/Recursive Programming
+Longest palindrome: Get char counts and differentiate even and odd x
+Integer Break, max product of positive integers summing to n: maximize number of 3s extractable from n until there is either a 4, 2, or 0
+Maximum Subarray: Move startIndex up only if val itself is greater, then just update maxSoFar
+
+Graph
+
+Maze/Path Finding
+Unique Paths, robot only moves down and right (count total paths): Make 2d array of number of paths of pos to finish. All edges of maze are 1. Then grid[i][j] = grid[i+1][j] + grid[i][j+1]
