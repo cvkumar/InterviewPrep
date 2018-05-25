@@ -1,24 +1,25 @@
 
-Arrays and Strings
+Arrays and Strings:
 Single Number
 Majority Element
 Roman to Integer
 Valid Parenthesis String
+Longest Substring Without Repeating Characters
 
-Linked List
+Linked List:
 Reverse Linked List II
 
 
-Binary Trees
+Binary Trees:
 
-Stacks and Queues
+Stacks and Queues:
 Implement a Priority Queue using a Stack
 Daily Temperatures
 
-Dynamic/Recursive Programming
+Dynamic/Recursive Programming:
 House Robber
 
-Graph
+Graph:
 
-Maze
+Maze:
 Find end if there are still blockers
