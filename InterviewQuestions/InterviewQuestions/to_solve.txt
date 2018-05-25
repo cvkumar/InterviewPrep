@@ -1,6 +1,5 @@
 
 Arrays and Strings
-Merge Intervals
 Single Number
 Majority Element
 Roman to Integer
@@ -11,14 +10,12 @@ Reverse Linked List II
 
 
 Binary Trees
-Binary Tree Inorder Traversal
 
 Stacks and Queues
 Implement a Priority Queue using a Stack
 Daily Temperatures
 
 Dynamic/Recursive Programming
-Longest Increasing Subsequence
 House Robber
 
 Graph

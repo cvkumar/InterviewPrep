@@ -10,6 +10,7 @@ Product of Array Except Self: Sweep left and right keeping track of product so f
 Valid Anagram: If length diff, then return False, Get char counts and compare them
 Longest Palindrome:
 Generate Parentheses:
+Merge Intervals
 
 Math
 Rectangle Overlap: Find 4 cases of when the rectangle does overlap then return opposite boolean
@@ -29,6 +30,7 @@ Same Tree: Use set to see if duplicate elements
 Balanced Binary Tree: Height doesn't differ by more than 1 for any subtree
 Binary Tree Paths: Keep all paths in array as strings
 Sum Root to Leaf Numbers: append all paths to array. Then, using helper function, sum them all
+Binary Tree Inorder Traversal
 
 Stacks and Queues
 Implement queues using stacks: Use two stacks
