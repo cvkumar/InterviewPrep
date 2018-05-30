@@ -51,3 +51,6 @@ if __name__ == '__main__':
 
     #   Expected [3, 1, 3]
     # print(countScores(lowerLimits, upperLimits, scores))
+
+
+# https://stackoverflow.com/questions/6553970/find-the-first-element-in-a-sorted-array-that-is-greater-than-the-target?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
