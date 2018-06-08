@@ -16,6 +16,7 @@ Math
 Rectangle Overlap: Find 4 cases of when the rectangle does overlap then return opposite boolean
 Array Partition I: Sort then only sum the backmost element of the pair every time (move up by two)
 Add Digits
+Rectangle Exists: Check if rectangle exists in grid
 
 Linked List
 Find start of cycle: distance from start to cycle = dist from where;fast and slow meet from cycle
