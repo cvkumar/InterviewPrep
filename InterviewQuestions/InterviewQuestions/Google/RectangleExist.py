@@ -35,5 +35,10 @@ if __name__ == '__main__':
              [0, 0, 0, 0],
              [1, 0, 0, 1],
              [0, 0, 0, 1]]
-
     print(isRectangleBruteForce(grid3))
+
+    grid4 = [[1, 2, 3]]
+    print(isRectangleBruteForce(grid4))
+
+    grid5 = [[]]
+    print(isRectangleBruteForce(grid5))

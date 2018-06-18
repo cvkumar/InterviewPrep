@@ -4,7 +4,6 @@ Single Number
 Majority Element
 Roman to Integer
 Valid Parenthesis String
-Longest Substring Without Repeating Characters
 
 Linked List:
 Reverse Linked List II
