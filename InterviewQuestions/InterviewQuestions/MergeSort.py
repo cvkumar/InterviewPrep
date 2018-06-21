@@ -6,21 +6,20 @@ def mergeSort(nums, low, high):
     :param high: points out of bounds on right side
     :return: sorted array
     """
+    if low >= high:
+        return
+
     mid = (low + high) / 2
 
+    left = mergeSort(nums, low, mid + 1)
+    right = mergeSort(nums, mid + 1, high)
 
-    t = mergeSort(nums, low, mid)
-    t2 = mergeSort(nums, mid + 1, high)
-
-    # TODO: Return indices that point to beginning of merged stuff
-
-    # return merge()
-
-
+    return merge(nums, left, right - 1, high)
 
 
 def merge(nums, l, m, h):
     """
+    :param nums: array to be sorted
     :param l: points to leftmost element
     :param m: points to last element of left half
     :param h: points to out of bounds of right half
@@ -58,4 +57,8 @@ def merge(nums, l, m, h):
 if __name__ == '__main__':
     arr1 = [1, 3, 5, 10, 2, 3, 7, 11]
 
-    print(merge(arr1, 0, 3, len(arr1)))
+    # print(merge(arr1, 0, 3, len(arr1)))
+
+    arr2 = [5, 1, 3, 8, 10, 0, 4]
+    print(mergeSort(arr2, 0, len(arr2)))
+
