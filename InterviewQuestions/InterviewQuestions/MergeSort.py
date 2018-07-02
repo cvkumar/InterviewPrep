@@ -1,6 +1,5 @@
 def mergeSort(nums, low, high):
     """
-
     :param nums: array to be sorted
     :param low: points first element
     :param high: points out of bounds on right side
@@ -9,12 +8,12 @@ def mergeSort(nums, low, high):
     if low >= high:
         return
 
-    mid = (low + high) / 2
+    # mid points to mid element (rounds down if necessary)
+    mid = (low + high - 1) / 2
 
-    left = mergeSort(nums, low, mid + 1)
-    right = mergeSort(nums, mid + 1, high)
-
-    return merge(nums, left, right - 1, high)
+    mergeSort(nums, low, mid)
+    mergeSort(nums, mid + 1, high)
+    merge(nums, low, mid, high)
 
 
 def merge(nums, l, m, h):
@@ -30,13 +29,16 @@ def merge(nums, l, m, h):
 
     res = []
 
-    while ptr1 < m and ptr2 < h:
+    while ptr1 <= m and ptr2 < h:
+
         if nums[ptr1] < nums[ptr2]:
             res.append(nums[ptr1])
             ptr1 += 1
         else:
             res.append(nums[ptr2])
             ptr2 += 1
+
+    # print res
 
     while ptr1 <= m:
         res.append(nums[ptr1])
@@ -48,17 +50,21 @@ def merge(nums, l, m, h):
 
     j = 0
     for i in range(l, h):
+        # print i, j
         nums[i] = res[j]
         j += 1
+
+    print 'sorted array from {} to {}'.format(l, h - 1)
+    print nums
 
     return nums
 
 
 if __name__ == '__main__':
-    arr1 = [1, 3, 5, 10, 2, 3, 7, 11]
+    nums = [1, 3, 5, 10, 2, 3, 7, 11]
 
-    # print(merge(arr1, 0, 3, len(arr1)))
+    # print merge(nums, 0, 3, len(nums))
 
-    arr2 = [5, 1, 3, 8, 10, 0, 4]
-    print(mergeSort(arr2, 0, len(arr2)))
-
+    arr2 = [5, 1, 3, 8, 10, 0, 4, 3]
+    mergeSort(arr2, 0, len(arr2))
+    print arr2
