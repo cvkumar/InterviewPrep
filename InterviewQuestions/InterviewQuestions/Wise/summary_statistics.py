@@ -1,5 +1,5 @@
 import sys
-import numpy
+import numpy as np
 import json
 import ast
 
@@ -31,31 +31,34 @@ def find_summary_statistics():
     :return: Std. Dev, Mean, Number of Lines
     """
 
+    # Change var name
     vals = []
 
     for line in sys.stdin:
+
+        # Change var name
         lineDict = ast.literal_eval(line)
-        vals.append(lineDict['timeToLive'])
+        vals.append(float(lineDict['timeToLive']))
 
     print('Number of Lines: {}').format(len(vals))
     print('Mean: {}').format(round(sum(vals) / len(vals), 2))
 
-    numArray = numpy.array(vals)
-    print('NumPy Std. Dev: {}').format(numpy.std(numArray, axis=0, ddof=0))
+    numArray = np.array(vals, dtype=np.float64)
+    print('NumPy Std. Dev: {}').format(np.std(numArray, axis=0, ddof=0))
 
-    print('My Std. Dev: {}').format(calculate_std_dev(vals))
+    print('My Std. Dev: {}').format(round(calculate_std_dev(vals), 2))
 
     print('Random Std. Dev: {}').format(stddev(vals))
 
 
-def calculate_std_dev(nums, ddof=0):
+def calculate_std_dev(nums):
     mean = sum(nums) / len(nums)
     diffSquareds = []
     for num in nums:
         diff = num - mean
         diffSquareds.append(diff ** 2)
 
-    meanOfDiffSquared = sum(diffSquareds) / (len(diffSquareds) - ddof)
+    meanOfDiffSquared = sum(diffSquareds) / (len(diffSquareds))
     return meanOfDiffSquared ** .5
 
 
@@ -65,9 +68,6 @@ def calculate_std_dev(nums, ddof=0):
 3. Then work out the mean of those squared differences.
 4. Take the square root of that and we are done!
 """
-
-if __name__ == '__main__':
-    find_summary_statistics()
 
 
 def mean(data):
@@ -95,3 +95,6 @@ def stddev(data, ddof=0):
     ss = _ss(data)
     pvar = ss / (n - ddof)
     return pvar ** 0.5
+
+
+find_summary_statistics()

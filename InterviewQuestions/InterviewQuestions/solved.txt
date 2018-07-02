@@ -8,8 +8,8 @@ Move Zeroes: Iterate, count all zeroes while moving non-zero elements back numZe
 Reverse Words in a String: Split words, then reverse
 Product of Array Except Self: Sweep left and right keeping track of product so far. Then should be able to determine.
 Valid Anagram: If length diff, then return False, Get char counts and compare them
-Longest Palindrome:
-Generate Parentheses:
+Longest Palindrome
+Generate Parentheses
 Merge Intervals
 
 Math
