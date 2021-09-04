@@ -76,8 +76,6 @@ print(arr)
 insertion_sort_solution(arr, k)
 print(arr)
 
-# TODO: Heap Sort Solution
-
 from heapq import heappop, heappush, heapify
 
 
