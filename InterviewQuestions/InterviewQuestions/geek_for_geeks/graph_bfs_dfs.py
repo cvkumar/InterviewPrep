@@ -57,8 +57,74 @@ class Graph:
 
             curr_node = queue.pop(0)
 
+    def do_dfs(self, start_node: int):
+        """
+        Algorithm:
+
+        keep track of visited
+
+        curr_node = start_node
+
+        1. if visited
+            stop
+
+        2. add curr_node to visited
+
+        3. go to 1 on each neighbor of curr_node
+
+        runtime complexity: O(|V| + |E|)
+        - touch each edge once
+        - touch each vertex once
+
+        """
+
+        visited = set()
+
+        curr_node = start_node
+
+        self.do_dfs_helper(curr_node, visited)
+
+    def do_dfs_helper(self, curr_node: int, visited: set):
+        if curr_node in visited:
+            print(f"VISITED ALREADY: {curr_node}")
+            return
+
+        print(curr_node)
+
+        visited.add(curr_node)
+
+        neighbors = self.graph[curr_node]
+
+        for neighbor in neighbors:
+            self.do_dfs_helper(neighbor, visited)
+
+
 
 if __name__ == "__main__":
+    # g = Graph()
+    # g.add_edge(0, 1)
+    # g.add_edge(0, 2)
+    # g.add_edge(1, 2)
+    # g.add_edge(2, 0)
+    # g.add_edge(2, 3)
+    # g.add_edge(3, 3)
+    #
+    # print("Following is Breadth First Traversal"
+    #       " (starting from vertex 2)")
+    # g.do_bfs(2)
+
+
+    g = Graph()
+    g.add_edge(0, 1)
+    g.add_edge(0, 2)
+    g.add_edge(1, 3)
+    g.add_edge(2, 3)
+    g.add_edge(1, 4)
+
+    print("Following is DFS"
+          " (starting from vertex 0)")
+    g.do_dfs(0)
+
     g = Graph()
     g.add_edge(0, 1)
     g.add_edge(0, 2)
@@ -67,6 +133,5 @@ if __name__ == "__main__":
     g.add_edge(2, 3)
     g.add_edge(3, 3)
 
-    print("Following is Breadth First Traversal"
-          " (starting from vertex 2)")
-    g.do_bfs(2)
+    # print("Following is DFS from (starting from vertex 2)")
+    # g.do_dfs(2)
